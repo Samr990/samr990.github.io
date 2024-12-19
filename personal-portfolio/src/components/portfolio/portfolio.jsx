@@ -6,7 +6,6 @@ export function Portfolio() {
         Hi, this is Samriddha Malla. I am currently learning frontend
         development using React.
       </p>
-
       <h3>My Skills</h3>
       <div>
         <li>Java.</li>
