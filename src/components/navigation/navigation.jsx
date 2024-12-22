@@ -1,9 +1,12 @@
+import "./navigation.css";
+
 export function Navigation() {
   return (
-    <nav>
-      <div>Home</div>
-      <div>About</div>
-      <div>Contact</div>
+    <nav className="vertical-nav">
+      <a href="#home">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
     </nav>
   );
 }

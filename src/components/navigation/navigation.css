@@ -1,0 +1,59 @@
+/* Vertical Navigation */
+.vertical-nav {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left of the nav bar */
+  background-color: var(--rich-black); /* Darker Background */
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+}
+
+.vertical-nav div {
+  margin: 10px 0;
+}
+
+.vertical-nav a {
+  color: var(--platinum);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.vertical-nav a:hover {
+  background-color: var(--yinmn-blue);
+  transform: translateX(
+    5px
+  ); /* Ensure hover effect aligns with left-aligned text */
+}
+
+.vertical-nav a.active {
+  background-color: var(--oxford-blue);
+  font-weight: bold;
+}
+
+/* Optional Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .vertical-nav {
+    top: 10px;
+    right: 10px;
+    transform: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    width: calc(100% - 20px);
+  }
+
+  .vertical-nav div {
+    margin: 0;
+  }
+
+  .vertical-nav a {
+    padding: 8px;
+  }
+}
