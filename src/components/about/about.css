@@ -1,0 +1,408 @@
+:root {
+  --rich-black: #0d1b2aff;
+  --oxford-blue: #1b263bff;
+  --yinmn-blue: #415a77ff;
+  --platinum: #e0e1ddff;
+  --highlight-blue: #3e92cc;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(
+      to right,
+      rgba(13, 27, 42, 0.9),
+      rgba(13, 27, 42, 0.5)
+    ),
+    url("https://i.pinimg.com/originals/c9/27/d5/c927d5d5a5a22ef621cae30bb882e234.jpg")
+      no-repeat center;
+  background-size: cover;
+  color: var(--platinum);
+  padding: 10px;
+  position: relative;
+  text-align: center;
+}
+
+.intro-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 50%;
+  opacity: 0;
+  animation: fadeInLeft 2s ease-out forwards;
+  margin-top: -10rem;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.left-side h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--platinum);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 50%;
+  opacity: 0;
+  animation: fadeInRight 2s ease-out forwards;
+  margin-top: 10rem;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.right-side .welcome-message {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--platinum);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  color: var(--platinum);
+  background-color: var(--yinmn-blue);
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+  background-color: var(--oxford-blue);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-side,
+  .right-side {
+    max-width: 100%;
+    text-align: center;
+    opacity: 1;
+    margin-top: 2rem;
+  }
+
+  .left-side h1 {
+    font-size: 2.5rem;
+  }
+
+  .right-side .welcome-message {
+    font-size: 1.2rem;
+  }
+
+  .right-side .btn {
+    margin-top: 20px;
+  }
+}
+
+.about-me {
+  background-color: var(--oxford-blue);
+  padding: 60px 20px;
+  color: rgb(54, 83, 116);
+  position: relative;
+}
+
+.about-me .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--platinum);
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: var(--platinum);
+  line-height: 1.6;
+  padding: 0 20px;
+  z-index: 10;
+}
+
+.about-me::before,
+.about-me::after {
+  content: "< >";
+  font-size: 4rem;
+  color: var(--platinum);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  z-index: 5;
+}
+
+.about-me::before {
+  left: 10%;
+}
+
+.about-me::after {
+  content: "< />";
+  right: 10%;
+  transform: translateY(-50%) rotate(45deg);
+  font-size: 4rem;
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .about-me::before,
+  .about-me::after {
+    font-size: 3rem;
+  }
+}
+
+.skills {
+  background: var(--platinum);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--oxford-blue);
+  border-bottom: 3px solid var(--highlight-blue);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--platinum);
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--yinmn-blue);
+}
+
+.skill-logo {
+  width: 60px;
+  height: 60px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  color: var(--oxford-blue);
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.skill-logo.html {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg");
+}
+
+.skill-logo.css {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg");
+}
+
+.skill-logo.javascript {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png");
+}
+
+.skill-logo.java {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg");
+}
+
+.skill-logo.react {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg");
+}
+
+.skill-logo.nodejs {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg");
+}
+
+.skill-logo.express {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png");
+}
+
+.skill-logo.sql {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png");
+}
+
+.skill-logo.git {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg");
+}
+
+.skill-logo.mongodb {
+  background-image: url("https://img.icons8.com/color/344/mongodb.png");
+}
+
+.skill-logo.docker {
+  background-image: url("https://img.icons8.com/color/344/docker.png");
+}
+
+@media (max-width: 768px) {
+  .skills h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .skill-card {
+    padding: 15px;
+    width: 120px;
+  }
+
+  .skill-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--rich-black);
+  color: var(--platinum);
+}
+
+.experience {
+  background-color: var(--oxford-blue);
+  padding: 50px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--platinum);
+  margin-bottom: 40px;
+  border-bottom: 2px solid var(--yinmn-blue);
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.experience-item {
+  background: var(--yinmn-blue);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.experience-item h3 {
+  font-size: 1.5rem;
+  color: var(--platinum);
+  margin-bottom: 10px;
+}
+
+.experience-item p {
+  margin: 5px 0;
+  color: var(--platinum);
+}
+
+.experience-item ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.experience-item ul li {
+  margin-bottom: 8px;
+  color: var(--platinum);
+}

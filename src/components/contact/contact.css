@@ -1,31 +1,63 @@
-/* Contact Section */
 .contact {
   background: var(--oxford-blue);
   color: var(--platinum);
-  padding: 50px 0;
+  padding: 30px 0;
+  text-align: center;
+  width: 100%;
 }
 
 .contact h2 {
   font-size: 2rem;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 input,
 textarea {
   width: 100%;
-  max-width: 500px;
   padding: 10px;
-  margin-bottom: 15px;
   border-radius: 5px;
   border: 1px solid var(--yinmn-blue);
+  font-size: 0.9rem;
+  color: var(--oxford-blue);
+  background-color: var(--platinum);
 }
 
 textarea {
-  height: 150px;
+  height: 120px;
+  resize: none;
+}
+
+button.btn {
+  background-color: var(--yinmn-blue);
+  color: var(--platinum);
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+button.btn:hover {
+  background-color: var(--platinum);
+  color: var(--oxford-blue);
+  transform: scale(1.05);
 }

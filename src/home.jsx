@@ -1,18 +1,17 @@
-import { Portfolio } from "./components/portfolio/portfolio";
 import { Navigation } from "./components/navigation/navigation";
-import { Intro } from "./components/intro/intro";
+import { About } from "./components/about/about";
 import { Footer } from "./components/footer/footer";
 import { Contact } from "./components/contact/contact";
+import { Projects } from "./components/projects/projects";
 
 function Home() {
   return (
     <div>
       <Navigation />
-      <Intro />
-      <Portfolio />
+      <About />
+      <Projects />
       <Contact />
       <Footer />
-      {/* <Trail /> */}
     </div>
   );
 }

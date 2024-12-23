@@ -1,15 +1,15 @@
-/* Vertical Navigation */
 .vertical-nav {
   position: fixed;
   top: 10px;
   right: 10px;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align items to the left of the nav bar */
-  background-color: var(--rich-black); /* Darker Background */
+  align-items: flex-start;
+  background-color: var(--rich-black);
   padding: 10px 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .vertical-nav div {
@@ -27,9 +27,7 @@
 
 .vertical-nav a:hover {
   background-color: var(--yinmn-blue);
-  transform: translateX(
-    5px
-  ); /* Ensure hover effect aligns with left-aligned text */
+  transform: translateX(5px);
 }
 
 .vertical-nav a.active {
@@ -37,16 +35,14 @@
   font-weight: bold;
 }
 
-/* Optional Styling for Smaller Screens */
 @media (max-width: 768px) {
   .vertical-nav {
     top: 10px;
     right: 10px;
-    transform: none;
     flex-direction: row;
     justify-content: space-around;
     padding: 10px;
-    width: calc(100% - 20px);
+    width: 100%;
   }
 
   .vertical-nav div {
