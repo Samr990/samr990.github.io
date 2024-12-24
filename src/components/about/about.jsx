@@ -9,11 +9,14 @@ export function About() {
           <div className="left-side">
             <h1>Samriddha Malla</h1>
             <h2>Full Stack Developer</h2>
+            <h3>New York, NY</h3>
           </div>
           <div className="right-side">
             <p className="welcome-message">
-              Hi, I'm Samriddha Malla, a Full Stack Developer dedicated to
-              creating efficient, scalable, and user-friendly web applications.
+              Hi, I’m a passionate Full Stack Developer with a strong foundation
+              in creating dynamic and impactful web applications. I’m dedicated
+              to leveraging technology to solve problems and deliver seamless
+              user experiences.
             </p>
             <a href="#projects" className="btn">
               View My Work
@@ -29,21 +32,19 @@ export function About() {
           <div className="about-content">
             <div className="about-text">
               <p>
-                Hi! I'm a passionate developer with a love for technology and a
-                strong foundation in full stack development. My goal is to
-                become a full-stack developer and build impactful applications.
+                Hi! I’m a passionate developer with a strong foundation in full
+                stack development, dedicated to building impactful applications
+                and continuously expanding my technical expertise.
               </p>
               <p>
-                Outside of coding, I’m a huge soccer fan—whether playing or
-                watching, it’s a sport that keeps me active and motivated.
+                Beyond coding, I’m a soccer enthusiast who enjoys staying active
+                both on and off the field, as well as exploring the outdoors
+                through hiking. I also have a creative side, diving into graphic
+                design to experiment with visuals.
               </p>
               <p>
-                I also love hiking and exploring the outdoors, as well as diving
-                into graphic design, where I enjoy creating and experimenting
-                with visuals.
-              </p>
-              <p>
-                I’m always learning and excited to take on the next challenge!
+                Driven by curiosity and a love for technology, I’m always ready
+                to embrace new challenges and opportunities.
               </p>
             </div>
           </div>

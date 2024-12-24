@@ -77,6 +77,15 @@ a {
   transform: scale(1.1);
 }
 
+.project-card .project-title {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--oxford-blue);
+  color: var(--platinum);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .project-card .description {
   position: absolute;
   top: 0;

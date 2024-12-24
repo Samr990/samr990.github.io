@@ -7,6 +7,14 @@ export function Footer() {
         <div className="footer-content">
           <p>&copy; 2024 Samriddha Malla. All rights reserved.</p>
           <div className="footer-links">
+            <a href="mailto:your-email@example.com" aria-label="Email">
+              <img
+                src="https://freepngimg.com/download/email_marketing/140771-symbol-email-free-clipart-hd.png"
+                alt="Email"
+                className="footer-icon"
+              />
+            </a>
+
             <a
               href="https://github.com/Samr990"
               target="_blank"
